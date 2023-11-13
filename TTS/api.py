@@ -238,8 +238,8 @@ class TTS(nn.Module):
                 raise ValueError("Model is multi-lingual but no `language` is provided.")
             if not self.is_multi_speaker and speaker is not None and "voice_dir" not in kwargs:
                 raise ValueError("Model is not multi-speaker but `speaker` is provided.")
-            if not self.is_multi_lingual and language is not None:
-                raise ValueError("Model is not multi-lingual but `language` is provided.")
+            # if not self.is_multi_lingual and language is not None:
+            #     raise ValueError("Model is not multi-lingual but `language` is provided.")
             if not emotion is None and not speed is None:
                 raise ValueError("Emotion and speed can only be used with Coqui Studio models.")
         else:
